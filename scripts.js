@@ -16,7 +16,7 @@ function playRound(humanChoice, computerChoice) {
 function getComputerChoice() {
   // Get a random number between 0 and 3.
   let randomNum = Math.random() * 3;
-  console.log(`randomNum: ${randomNum}`);
+  
   if (0 <= randomNum && randomNum < 1) {
     // If number is in [0, 1), choose rock.
     return "rock";
