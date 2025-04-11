@@ -1,4 +1,5 @@
 console.log(getComputerChoice());
+console.log(getHumanChoice());
 
 // Randomly return "rock", "paper", or "scissors"
 function getComputerChoice() {
@@ -15,4 +16,11 @@ function getComputerChoice() {
     // If number is in [2, 3), choose scissors.
     return "scissors";
   }
+}
+
+// Get a choice from the user
+function getHumanChoice() {
+  // Prompt user and return their choice.
+  // Note: for now, assumes user always enters a valid choice.
+  return prompt("Rock, paper, or scissors?");
 }
