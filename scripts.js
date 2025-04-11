@@ -24,9 +24,16 @@ function playRound(humanChoice, computerChoice) {
   } else if (humanChoice === "paper") {
     // If user picked paper, indicate win against rock and lose against scissors.
     if (computerChoice === "rock") {
-      console.log("You win! Paper beaks rock.");
+      console.log("You win! Paper beats rock.");
     } else if (computerChoice === "scissors") {
       console.log("You lose! Scissors beats paper.");
+    }
+  } else if (humanChoice === "scissors") {
+    // If user picked scissors, indicate win against paper and lose against rock.
+    if (computerChoice === "paper") {
+      console.log("You win! Scissors beats paper.");
+    } else if (computerChoice === "rock") {
+      console.log("You lose! Rock beats scissors.");
     }
   }
 }
