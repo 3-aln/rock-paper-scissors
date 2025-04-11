@@ -1,7 +1,7 @@
 console.log(getComputerChoice());
 console.log(getHumanChoice());
 
-// Randomly return "rock", "paper", or "scissors"
+// Randomly return "rock", "paper", or "scissors".
 function getComputerChoice() {
   // Get a random number between 0 and 3.
   let randomNum = Math.random() * 3;
@@ -18,7 +18,7 @@ function getComputerChoice() {
   }
 }
 
-// Get a choice from the user
+// Get a choice from the user.
 function getHumanChoice() {
   // Prompt user and return their choice.
   // Note: for now, assumes user always enters a valid choice.
