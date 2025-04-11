@@ -1,5 +1,16 @@
 console.log(getComputerChoice());
-console.log(getHumanChoice());
+
+let humanScore = 0;
+let computerScore = 0;
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
+
+function playRound(humanChoice, computerChoice) {
+
+}
 
 // Randomly return "rock", "paper", or "scissors".
 function getComputerChoice() {
