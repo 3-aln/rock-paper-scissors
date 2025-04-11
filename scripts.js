@@ -1,3 +1,5 @@
+console.log(getComputerChoice());
+
 // Randomly return "rock", "paper", or "scissors"
 function getComputerChoice() {
   // Get a random number between 0 and 3.
@@ -14,5 +16,3 @@ function getComputerChoice() {
     return "scissors";
   }
 }
-
-console.log(getComputerChoice());
