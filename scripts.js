@@ -8,8 +8,8 @@ playRound(humanSelection, computerSelection);
 
 function playRound(humanChoice, computerChoice) {
   humanChoice = humanChoice.toLowerCase();
-  console.log(humanChoice);
-  console.log(computerChoice);
+  console.log(`         You picked: ${humanChoice}.`);
+  console.log(`The computer picked: ${computerChoice}.`);
 
   if (humanChoice === computerChoice) {
     // If user and computer picked the same option, tie.
