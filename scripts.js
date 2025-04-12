@@ -63,7 +63,7 @@ function getHumanChoice() {
 }
 
 // Show text indicating that the player won and increment their score.
-function printWin(humanChoice, computerChoice) {
+function recordWin(humanChoice, computerChoice) {
   // Capitalize the first letter of the user's choice.
   humanChoice = humanChoice.charAt(0).toUpperCase() +
                 humanChoice.substring(1, humanChoice.length);
