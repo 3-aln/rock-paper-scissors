@@ -36,6 +36,7 @@ function playRound(humanChoice, computerChoice) {
       recordLoss(humanChoice, computerChoice);
     }
   }
+  console.log(`User score: ${humanScore}, computer score: ${computerScore}`);
 }
 
 // Randomly return "rock", "paper", or "scissors".
