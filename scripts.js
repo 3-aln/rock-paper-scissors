@@ -8,6 +8,7 @@ function playGame() {
   let computerScore = 0;
   
   playRound(humanSelection, computerSelection);
+  
   function playRound(humanChoice, computerChoice) {
     humanChoice = humanChoice.toLowerCase();
     console.log(`         You picked: ${humanChoice}.`);
@@ -63,7 +64,6 @@ function playGame() {
     // Increment the computer's score.
     computerScore++;
   }
-
 }
 
 // Randomly return "rock", "paper", or "scissors".
