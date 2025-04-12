@@ -1,14 +1,16 @@
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-
 playGame();
 
 function playGame() {
   let humanScore = 0;
   let computerScore = 0;
   
-  playRound(humanSelection, computerSelection);
-  
+  for (let i = 0; i < 5; i++) {
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+    playRound(humanSelection, computerSelection);
+    console.log("-----------------------------------------------");
+  }
+
   function playRound(humanChoice, computerChoice) {
     humanChoice = humanChoice.toLowerCase();
     console.log(`         You picked: ${humanChoice}.`);
