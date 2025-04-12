@@ -2,7 +2,7 @@
 
 View the site and try out the game: https://3-aln.github.io/rock-paper-scissors/
 
-Implementation of five rounds of Rock Paper Scissors, played using browser prompt dialogs against the computer. Results for each round are shown in the browser console.
+This is an implementation of five rounds of Rock Paper Scissors, played using browser prompt dialogs against the computer. Results for each round are shown in the browser console.
 
 ## How to play
 
