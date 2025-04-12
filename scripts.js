@@ -62,11 +62,14 @@ function getHumanChoice() {
   return prompt("Rock, paper, or scissors?");
 }
 
-// Show text indicating that the player won against the computer.
+// Show text indicating that the player won and increment their score.
 function printWin(humanChoice, computerChoice) {
   // Capitalize the first letter of the user's choice.
+  humanChoice = humanChoice.charAt(0).toUpperCase() +
+                humanChoice.substring(1, humanChoice.length);
 
   console.log(`You win! ${humanChoice} beats ${computerChoice}.`);
 
   // Increment the user's score.
+  humanScore++;
 }
