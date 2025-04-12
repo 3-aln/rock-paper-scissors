@@ -73,3 +73,14 @@ function recordWin(humanChoice, computerChoice) {
   // Increment the user's score.
   humanScore++;
 }
+
+function recordLoss(humanChoice, computerChoice) {
+  // Capitalize the first letter of the computer's choice.
+  computerChoice = computerChoice.charAt(0).toUpperCase() +
+                computerChoice.substring(1, computerChoice.length);
+
+  console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);
+
+  // Increment the computer's score.
+  computerScore++;
+}
