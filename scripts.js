@@ -68,5 +68,5 @@ function printWin(humanChoice, computerChoice) {
 
   console.log(`You win! ${humanChoice} beats ${computerChoice}.`);
 
-  // Increment the user's score and decrement the computer's score.
+  // Increment the user's score.
 }
