@@ -8,7 +8,25 @@ function playGame() {
 
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
-      console.log(button.id);
+      
+      // When a button is clicked, get a new computer selection.
+      const computerSelection = getComputerChoice();
+      
+      // Set humanSelection based on which button was clicked.
+      let humanSelection;
+      switch (button.id) {
+        case "rock-button":
+          humanSelection = "rock";
+          break;
+        case "paper-button":
+          humanSelection = "paper";
+          break;
+        case "scissors-button":
+          humanSelection = "scissors";
+          break;
+      }
+
+      playRound(humanSelection, computerSelection);
     })
   });
 
