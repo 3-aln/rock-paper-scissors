@@ -52,7 +52,7 @@ function playGame() {
 
     if (humanChoice === computerChoice) {
       // If user and computer picked the same option, tie.
-      roundResults.textContent = (`Tie! Both you and the computer picked ${humanChoice}.`);
+      roundResults.textContent = (`This round is a tie! Both you and the computer picked ${humanChoice}.`);
     } else if (humanChoice === "rock") {
       // If user picked rock, indicate win against scissors and lose against paper.
       if (computerChoice === "scissors") {
@@ -90,7 +90,7 @@ function playGame() {
     humanChoice = humanChoice.charAt(0).toUpperCase() +
                   humanChoice.substring(1, humanChoice.length);
 
-    roundResults.textContent = (`You win! ${humanChoice} beats ${computerChoice}.`);
+    roundResults.textContent = (`You win this round! ${humanChoice} beats ${computerChoice}.`);
 
     // Increment the user's score.
     humanScore++;
@@ -101,7 +101,7 @@ function playGame() {
     computerChoice = computerChoice.charAt(0).toUpperCase() +
                   computerChoice.substring(1, computerChoice.length);
 
-    roundResults.textContent = (`You lose! ${computerChoice} beats ${humanChoice}.`);
+    roundResults.textContent = (`You lose this round! ${computerChoice} beats ${humanChoice}.`);
 
     // Increment the computer's score.
     computerScore++;
