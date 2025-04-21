@@ -106,10 +106,3 @@ function getComputerChoice() {
     return "scissors";
   }
 }
-
-// Get a choice from the user.
-function getHumanChoice() {
-  // Prompt user and return their choice.
-  // Note: for now, assumes user always enters a valid choice.
-  return prompt("Rock, paper, or scissors?");
-}
