@@ -4,6 +4,14 @@ function playGame() {
   let humanScore = 0;
   let computerScore = 0;
 
+  const buttons = document.querySelectorAll("button");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      console.log(button.id);
+    })
+  });
+
   function playRound(humanChoice, computerChoice) {
     humanChoice = humanChoice.toLowerCase();
     console.log(`         You picked: ${humanChoice}.`);
