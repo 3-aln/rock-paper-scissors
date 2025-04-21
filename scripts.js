@@ -3,6 +3,7 @@ playGame();
 function playGame() {
   let humanScore = 0;
   let computerScore = 0;
+  let roundNum = 0;
 
   const buttons = document.querySelectorAll("button");
 
@@ -30,14 +31,25 @@ function playGame() {
     })
   });
 
+  const roundHeading = document.querySelector("#round-heading");
   const roundSelections = document.querySelector("#round-selections");
   const roundResults = document.querySelector("#round-results");
 
+  const humanScorePara = document.querySelector("#human-score-para");
+  const computerScorePara = document.querySelector("#computer-score-para");
+
+  updateScoreText();
+
   function playRound(humanChoice, computerChoice) {
     humanChoice = humanChoice.toLowerCase();
-    roundSelections.textContent = (`         You picked: ${humanChoice}. `);
+
+    // Display the selections made this round.
+    roundSelections.textContent = (`You picked: ${humanChoice}. `);
     roundSelections.textContent += (`The computer picked: ${computerChoice}.`);
   
+    roundNum++;
+    roundHeading.textContent = `Round ${roundNum} Results`;
+
     if (humanChoice === computerChoice) {
       // If user and computer picked the same option, tie.
       roundResults.textContent = (`Tie! Both you and the computer picked ${humanChoice}.`);
@@ -63,7 +75,13 @@ function playGame() {
         recordLoss(humanChoice, computerChoice);
       }
     }
-    console.log(`User score: ${humanScore}, computer score: ${computerScore}`);
+
+    updateScoreText();
+  }
+
+  function updateScoreText() {
+    humanScorePara.textContent = `Your score: ${humanScore}`
+    computerScorePara.textContent = `Computer’s score: ${computerScore}`
   }
 
   // Show text indicating that the player won and increment their score.
