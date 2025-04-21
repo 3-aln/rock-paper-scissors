@@ -30,14 +30,17 @@ function playGame() {
     })
   });
 
+  const roundSelections = document.querySelector("#round-selections");
+  const roundResults = document.querySelector("#round-results");
+
   function playRound(humanChoice, computerChoice) {
     humanChoice = humanChoice.toLowerCase();
-    console.log(`         You picked: ${humanChoice}.`);
-    console.log(`The computer picked: ${computerChoice}.`);
+    roundSelections.textContent = (`         You picked: ${humanChoice}. `);
+    roundSelections.textContent += (`The computer picked: ${computerChoice}.`);
   
     if (humanChoice === computerChoice) {
       // If user and computer picked the same option, tie.
-      console.log(`Tie! Both you and the computer picked ${humanChoice}.`);
+      roundResults.textContent = (`Tie! Both you and the computer picked ${humanChoice}.`);
     } else if (humanChoice === "rock") {
       // If user picked rock, indicate win against scissors and lose against paper.
       if (computerChoice === "scissors") {
@@ -69,7 +72,7 @@ function playGame() {
     humanChoice = humanChoice.charAt(0).toUpperCase() +
                   humanChoice.substring(1, humanChoice.length);
 
-    console.log(`You win! ${humanChoice} beats ${computerChoice}.`);
+    roundResults.textContent = (`You win! ${humanChoice} beats ${computerChoice}.`);
 
     // Increment the user's score.
     humanScore++;
@@ -80,7 +83,7 @@ function playGame() {
     computerChoice = computerChoice.charAt(0).toUpperCase() +
                   computerChoice.substring(1, computerChoice.length);
 
-    console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);
+    roundResults.textContent = (`You lose! ${computerChoice} beats ${humanChoice}.`);
 
     // Increment the computer's score.
     computerScore++;
