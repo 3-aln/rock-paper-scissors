@@ -4,6 +4,7 @@ function playGame() {
   let humanScore = 0;
   let computerScore = 0;
   let roundNum = 0;
+  let winner = "";
 
   const buttons = document.querySelectorAll("button");
 
@@ -27,7 +28,7 @@ function playGame() {
           break;
       }
 
-      playRound(humanSelection, computerSelection);
+      if (!winner) playRound(humanSelection, computerSelection);
     })
   });
 
@@ -38,6 +39,8 @@ function playGame() {
   const humanScorePara = document.querySelector("#human-score-para");
   const computerScorePara = document.querySelector("#computer-score-para");
 
+  const gameResults = document.querySelector("#game-results");
+
   updateScoreText();
 
   function playRound(humanChoice, computerChoice) {
@@ -46,7 +49,7 @@ function playGame() {
     // Display the selections made this round.
     roundSelections.textContent = (`You picked: ${humanChoice}. `);
     roundSelections.textContent += (`The computer picked: ${computerChoice}.`);
-  
+
     roundNum++;
     roundHeading.textContent = `Round ${roundNum} Results`;
 
@@ -77,6 +80,26 @@ function playGame() {
     }
 
     updateScoreText();
+
+    winner = checkForWinner();
+
+    if (winner) {
+      switch (winner) {
+        case "human":
+          gameResults.textContent = `Congratulations — you won!`;
+          break;
+        case "computer":
+          gameResults.textContent = `You lost — try again!`;
+          break;
+      }
+      return;
+    }
+  }
+
+  function checkForWinner() {
+    if (humanScore >= 5) return "human";
+    if (computerScore >= 5) return "computer";
+    return "";
   }
 
   function updateScoreText() {
