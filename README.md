@@ -2,7 +2,7 @@
 
 View the site and try out the game: https://3-aln.github.io/rock-paper-scissors/
 
-Implementation of Rock Paper Scissors, played against the computer using a button and text UI.
+Implementation of Rock Paper Scissors, played against the computer through a user interface of buttons and text.
 
 ## How to play
 
